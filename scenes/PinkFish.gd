@@ -21,4 +21,4 @@ func _on_PinkFish_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene(str("res://scenes/" + "LoseScreen" + ".tscn"))
 	else:
-		body.queue_free()
+		queue_free()

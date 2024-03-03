@@ -8,6 +8,8 @@ radius = 15.0
 
 [node name="PinkFish" type="RigidBody2D"]
 collision_layer = 3
+contacts_reported = 1
+contact_monitor = true
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
