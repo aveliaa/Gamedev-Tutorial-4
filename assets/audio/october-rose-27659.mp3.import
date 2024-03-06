@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/october-rose-27659.mp3-eccd41497227d991749f5062f5ea109b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/october-rose-27659.mp3"
+dest_files=[ "res://.import/october-rose-27659.mp3-eccd41497227d991749f5062f5ea109b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/SawHalf.gd" type="Script" id=1]
 [ext_resource path="res://assets/kenney_platformerpack/PNG/Enemies/sawHalf.png" type="Texture" id=2]
+[ext_resource path="res://assets/audio/ough-47202.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/massive-thump-116359.mp3" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 19.0
@@ -21,5 +23,11 @@ texture = ExtResource( 2 )
 position = Vector2( 221, 434 )
 rotation = 1.5708
 shape = SubResource( 1 )
+
+[node name="AudioHitPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

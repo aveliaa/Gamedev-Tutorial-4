@@ -17,6 +17,8 @@ func _ready():
 
 func trigger(scene,body):
 	if body.get_name() == "Player":
+		body.hide()
+		yield(get_tree().create_timer(1), "timeout")
 		get_tree().change_scene(str("res://scenes/" + scene + ".tscn"))
 
 func _on_LoseArea_body_entered(body):

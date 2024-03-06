@@ -16,7 +16,11 @@ func _ready():
 #	pass
 
 func _on_PinkFish_body_entered(body):
+	$AudioHit.play()
 	if body.get_name() == "Player":
+		$AudioHitPlayer.play()
+		yield(get_tree().create_timer(0.5), "timeout")
 		get_tree().change_scene(str("res://scenes/" + "LoseScreen" + ".tscn"))
 	else:
+		yield(get_tree().create_timer(0.25), "timeout")
 		queue_free()

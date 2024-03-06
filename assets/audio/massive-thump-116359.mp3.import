@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/massive-thump-116359.mp3-e0c484f5f120e88ff56ecd43a0974c73.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/massive-thump-116359.mp3"
+dest_files=[ "res://.import/massive-thump-116359.mp3-e0c484f5f120e88ff56ecd43a0974c73.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

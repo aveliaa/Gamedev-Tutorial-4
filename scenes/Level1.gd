@@ -18,6 +18,9 @@ func _ready():
 
 func trigger(scene,body):
 	if body.get_name() == "Player":
+		body.hide()
+		$LevelDone.show()
+		yield(get_tree().create_timer(1), "timeout")
 		get_tree().change_scene(str("res://scenes/" + scene + ".tscn"))
 		
 

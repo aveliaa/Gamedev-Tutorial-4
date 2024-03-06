@@ -12,6 +12,7 @@ var velocity: Vector2 = Vector2()
 func get_input():
 	velocity.x = 0
 	if is_on_floor() and Input.is_action_just_pressed("jump"):
+		$AudioJump.play()
 		velocity.y = jump_speed
 	if Input.is_action_pressed("right"):
 		velocity.x += speed

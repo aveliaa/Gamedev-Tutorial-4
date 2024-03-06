@@ -16,10 +16,5 @@ func _ready():
 #	pass
 
 
-
-func _on_Area2D_body_entered(body):
-	if body.get_name() == "Player":
-		$AudioHitPlayer.play()
-		$AudioHit.play()
-		yield(get_tree().create_timer(0.5), "timeout")
-		get_tree().change_scene(str("res://scenes/" + "LoseScreen" + ".tscn"))
+func _on_Button_pressed():
+	get_tree().change_scene("res://scenes/Level1.tscn")

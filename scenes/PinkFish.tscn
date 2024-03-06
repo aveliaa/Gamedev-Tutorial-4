@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/kenney_platformerpack/PNG/Enemies/fishPink_dead.png" type="Texture" id=1]
 [ext_resource path="res://scenes/PinkFish.gd" type="Script" id=2]
+[ext_resource path="res://assets/audio/slimejump-6913.mp3" type="AudioStream" id=3]
+[ext_resource path="res://assets/audio/ough-47202.mp3" type="AudioStream" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 15.0
@@ -20,5 +22,11 @@ texture = ExtResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 2, 3 )
 shape = SubResource( 1 )
+
+[node name="AudioHit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="AudioHitPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_PinkFish_body_entered"]
