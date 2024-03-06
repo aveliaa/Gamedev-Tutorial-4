@@ -44,7 +44,7 @@ position = Vector2( 1504, 61 )
 position = Vector2( 148, -52 )
 shape = SubResource( 2 )
 
-[node name="Spawner" type="Node2D" parent="."]
+[node name="Fish Spawner" type="Node2D" parent="."]
 position = Vector2( 1019, -465 )
 script = ExtResource( 3 )
 obstacle = ExtResource( 6 )

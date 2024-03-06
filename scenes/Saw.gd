@@ -15,7 +15,8 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_PinkFish_body_entered(body):
+
+func _on_Saw_body_entered(body):
 	if body.get_name() == "Player":
 		get_tree().change_scene(str("res://scenes/" + "LoseScreen" + ".tscn"))
 	else:

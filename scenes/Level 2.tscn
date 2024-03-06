@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/planet.tres" type="TileSet" id=2]
+[ext_resource path="res://scenes/Saw.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Spawner.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Level 2.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Roket.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 2386, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 158, 239 )
+
+[node name="Level 2" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 144, 52 )
+collision_layer = 3
+collision_mask = 3
+speed = 300
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+format = 1
+tile_data = PoolIntArray( 131073, 2, 65542, 131075, 2, 65543, 131077, 2, 65543, 131079, 2, 65543, 131081, 2, 65544, 262158, 2, 65542, 262160, 2, 65543, 262162, 2, 65543, 262164, 2, 65543, 262166, 2, 65543, 262168, 2, 65544, 458780, 2, 65542, 458782, 2, 65543, 458784, 2, 65543, 458786, 2, 65543, 458788, 2, 65540, 589852, 2, 1, 589854, 2, 1, 589856, 2, 1, 589858, 2, 1, 589860, 2, 7, 589862, 2, 65540, 589883, 2, 65541, 589885, 2, 65543, 589887, 2, 65543, 589889, 2, 4, 720924, 2, 1, 720926, 2, 1, 720928, 2, 1, 720930, 2, 1, 720932, 2, 1, 720934, 2, 7, 720936, 2, 65540, 720940, 2, 3, 720942, 2, 65543, 720944, 2, 4, 720948, 2, 3, 720950, 2, 65543, 720952, 2, 4 )
+
+[node name="LoseArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LoseArea"]
+position = Vector2( 2280, 854.5 )
+shape = SubResource( 1 )
+
+[node name="Saw Spawner" type="Node2D" parent="."]
+position = Vector2( 1019, -465 )
+script = ExtResource( 4 )
+obstacle = ExtResource( 3 )
+
+[node name="RigidBody2D" parent="." instance=ExtResource( 6 )]
+position = Vector2( 3916, 379 )
+
+[node name="WinArea" type="Area2D" parent="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/WinArea"]
+position = Vector2( 178, -46 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="LoseArea" to="." method="_on_LoseArea_body_entered"]
+[connection signal="body_entered" from="RigidBody2D/WinArea" to="." method="_on_WinArea_body_entered"]
