@@ -27,7 +27,7 @@ position = Vector2( 2, 0 )
 tile_set = ExtResource( 2 )
 collision_layer = 3
 format = 1
-tile_data = PoolIntArray( 131073, 0, 65543, 131075, 0, 65543, 131077, 0, 65543, 131079, 0, 65540, 262145, 0, 1, 262147, 0, 1, 262149, 0, 1, 262151, 0, 7, 262153, 0, 65543, 262155, 0, 65543, 262157, 0, 65544, 262161, 0, 3, 262163, 0, 4, 262167, 0, 3, 262169, 0, 65543, 262171, 0, 4 )
+tile_data = PoolIntArray( 131073, 0, 65543, 131075, 0, 65543, 131077, 0, 65543, 131079, 0, 65540, 196646, 0, 3, 196648, 0, 4, 262145, 0, 1, 262147, 0, 1, 262149, 0, 1, 262151, 0, 7, 262153, 0, 65543, 262155, 0, 65543, 262157, 0, 65544, 262161, 0, 3, 262163, 0, 4, 262167, 0, 3, 262169, 0, 65543, 262171, 0, 4, 262176, 0, 3, 262178, 0, 4 )
 
 [node name="LoseArea" type="Area2D" parent="."]
 
@@ -36,7 +36,7 @@ position = Vector2( 773, 631 )
 shape = SubResource( 1 )
 
 [node name="RigidBody2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1504, 61 )
+position = Vector2( 2400, -5 )
 
 [node name="WinArea" type="Area2D" parent="RigidBody2D"]
 

@@ -16,14 +16,7 @@ func _ready():
 #	pass
 
 
-func trigger(scene,body):
+
+func _on_Area2D_body_entered(body):
 	if body.get_name() == "Player":
-		get_tree().change_scene(str("res://scenes/" + scene + ".tscn"))
-		
-
-func _on_LoseArea_body_entered(body):
-	trigger("LoseScreen",body)
-
-func _on_WinArea_body_entered(body):
-	trigger("Level 2",body)
-
+		get_tree().change_scene(str("res://scenes/" + "LoseScreen" + ".tscn"))

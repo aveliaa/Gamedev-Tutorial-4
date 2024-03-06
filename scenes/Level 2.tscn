@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/planet.tres" type="TileSet" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://scenes/Spawner.gd" type="Script" id=4]
 [ext_resource path="res://scenes/Level 2.gd" type="Script" id=5]
 [ext_resource path="res://scenes/Roket.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/SawHalf.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 2386, 12.5 )
@@ -46,6 +47,15 @@ position = Vector2( 3916, 379 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D/WinArea"]
 position = Vector2( 178, -46 )
 shape = SubResource( 2 )
+
+[node name="SawHalf" parent="." instance=ExtResource( 7 )]
+position = Vector2( 242, -322 )
+
+[node name="SawHalf2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1034, -195 )
+
+[node name="SawHalf3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2789, 253 )
 
 [connection signal="body_entered" from="LoseArea" to="." method="_on_LoseArea_body_entered"]
 [connection signal="body_entered" from="RigidBody2D/WinArea" to="." method="_on_WinArea_body_entered"]
