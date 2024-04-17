@@ -7,9 +7,9 @@ Avelia Diva Zahra, 2006596176 <br><br>
 - Membuat singleton untuk life counter
 - Menambahkan sistem GUI yang mengimplementasikan life counter dengan label dan margincontainer
 - mengimplementasikan sistem nyawa di level 1
-- mengedit layar game over sehingga melakukan redirect ke main menu
-- mengimplementasikan level select page dengan vbox container dan linkbutton dan mengaturnya agar melakukan redirect ke level yang sesuai
-- menambahkan layar transisi diantara level 1 dan 2
+- mengedit layar game over sehingga melakukan redirect ke main menu [Screen/LoseScreen.tcsn]
+- mengimplementasikan level select page dengan vbox container dan linkbutton dan mengaturnya agar melakukan redirect ke level yang sesuai [Screen/SelectLevel.tcsn]
+- menambahkan layar transisi diantara level 1 dan 2 [Screen/Transition.tcsn]
 - menambahkan musik di main menu dan level select page
   
 ## Proses Pengerjaan Level Baru Tutorial 4
