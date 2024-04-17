@@ -11,7 +11,7 @@ Avelia Diva Zahra, 2006596176 <br><br>
 - mengimplementasikan level select page dengan vbox container dan linkbutton dan mengaturnya agar melakukan redirect ke level yang sesuai
 - menambahkan layar transisi diantara level 1 dan 2
 - menambahkan musik di main menu dan level select page
-- 
+  
 ## Proses Pengerjaan Level Baru Tutorial 4
 Avelia Diva Zahra, 2006596176 <br><br>
 
