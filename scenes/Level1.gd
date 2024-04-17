@@ -33,7 +33,7 @@ func _on_LoseArea_body_entered(body):
 	if current_scene == sceneName:
 		Global.lives -=1
 	
-	if (Global.lives == 0):
+	if (Global.lives < 0):
 		trigger("LoseScreen",body)
 	
 	else:

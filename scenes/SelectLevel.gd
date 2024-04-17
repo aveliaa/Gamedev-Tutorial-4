@@ -1,4 +1,4 @@
-extends LinkButton
+extends MarginContainer
 
 
 # Declare member variables here. Examples:
@@ -15,11 +15,10 @@ func _ready():
 #func _process(delta):
 #	pass
 
-export(String) var scene_to_load
 
-func _on_new_pressed():
-	get_tree().change_scene(str("res://scenes/" + scene_to_load + ".tscn"))
+func _on_1_pressed():
+	get_tree().change_scene(str("res://scenes/" + "Level1" + ".tscn"))
 
 
-func _on_stage_pressed():
-	get_tree().change_scene(str("res://scenes/" + "SelectLevel" + ".tscn"))
+func _on_2_pressed():
+	get_tree().change_scene(str("res://scenes/" + "Level 2" + ".tscn"))
