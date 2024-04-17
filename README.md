@@ -1,3 +1,17 @@
+## Proses Pengerjaan Tutorial 6
+Avelia Diva Zahra, 2006596176 <br><br>
+
+- Membuat menu utama dengan container, label, dan texture rect, mengikuti contoh pada tutorial
+- Menambahkan font dan mengimplementasikannya di semua label
+- Membuat menu clickable
+- Membuat singleton untuk life counter
+- Menambahkan sistem GUI yang mengimplementasikan life counter dengan label dan margincontainer
+- mengimplementasikan sistem nyawa di level 1
+- mengedit layar game over sehingga melakukan redirect ke main menu
+- mengimplementasikan level select page dengan vbox container dan linkbutton dan mengaturnya agar melakukan redirect ke level yang sesuai
+- menambahkan layar transisi diantara level 1 dan 2
+- menambahkan musik di main menu dan level select page
+- 
 ## Proses Pengerjaan Level Baru Tutorial 4
 Avelia Diva Zahra, 2006596176 <br><br>
 
