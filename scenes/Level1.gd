@@ -15,6 +15,7 @@ func _ready():
 #func _process(delta):
 #	pass
 
+export (String) var sceneName = "Level1"
 
 func trigger(scene,body):
 	if body.get_name() == "Player":
@@ -25,7 +26,18 @@ func trigger(scene,body):
 		
 
 func _on_LoseArea_body_entered(body):
-	trigger("LoseScreen",body)
+	#trigger("LoseScreen",body)
+
+	var current_scene = get_tree().get_current_scene().get_name()
+	
+	if current_scene == sceneName:
+		Global.lives -=1
+	
+	if (Global.lives == 0):
+		trigger("LoseScreen",body)
+	
+	else:
+		get_tree().change_scene(str("res://scenes/" + sceneName + ".tscn"))
 
 func _on_WinArea_body_entered(body):
 	trigger("Level 2",body)
